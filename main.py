@@ -72,8 +72,29 @@ def twoSum(nums: list[int], target: int) -> list[int]:
             return i, hashMap[target - nums[i]]
 
 
+def valid_parentheses(s: str) -> bool:
+    """
+    Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+    An input string is valid if:
+    Open brackets must be closed by the same type of brackets.
+    Open brackets must be closed in the correct order.
+    Every close bracket has a corresponding open bracket of the same type.
+    :param s: List
+    :return: boolean
+    """
+    pair = dict(('()', '[]', '{}'))
+    stack = []
+    for x in s:
+        if x in '([{':
+            stack.append(x)
+        elif len(stack) == 0 or x != pair[stack.pop()]:
+            return False
+    return len(stack) == 0
+
+
 if __name__ == '__main__':
     print(running_sum([1, 2, 3, 4]))
     print(pivot_index([1, 7, 3, 6, 5, 6]))
     print(is_isomorphic("paper", "title"))
-    print(twoSum([2,7,11,15]))
+    print(twoSum([2, 7, 11, 15]))
+    print(valid_parentheses('([{}])'))
