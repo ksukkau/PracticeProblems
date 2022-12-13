@@ -66,8 +66,9 @@ def twoSum(nums: list[int], target: int) -> list[int]:
     :param target: int
     :return: list[int]
     """
-    hashMap = {nums[i]: i for i in range(len(nums))}
-    for i in range(len(nums)):
+    length = len(nums)
+    hashMap = {nums[i]: i for i in range(length)}
+    for i in range(length):
         if target - nums[i] in hashMap and hashMap[target - nums[i]] != i:
             return i, hashMap[target - nums[i]]
 
@@ -82,6 +83,8 @@ def valid_parentheses(s: str) -> bool:
     :param s: List
     :return: boolean
     """
+    if len(s) < 2:
+        return False
     pair = dict(('()', '[]', '{}'))
     stack = []
     for x in s:
