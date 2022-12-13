@@ -55,7 +55,25 @@ def is_isomorphic(s: str, t: str) -> bool:
     return True
 
 
+def twoSum(nums: list[int], target: int) -> list[int]:
+    """
+    Given an array of integers nums and an integer target, return indices of the two numbers
+    such that they add up to target.
+    You may assume that each input would have exactly one solution,
+    and you may not use the same element twice.
+    You can return the answer in any order.
+    :param nums: List[int]
+    :param target: int
+    :return: list[int]
+    """
+    hashMap = {nums[i]: i for i in range(len(nums))}
+    for i in range(len(nums)):
+        if target - nums[i] in hashMap and hashMap[target - nums[i]] != i:
+            return i, hashMap[target - nums[i]]
+
+
 if __name__ == '__main__':
     print(running_sum([1, 2, 3, 4]))
     print(pivot_index([1, 7, 3, 6, 5, 6]))
     print(is_isomorphic("paper", "title"))
+    print(twoSum([2,7,11,15]))
