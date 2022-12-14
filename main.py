@@ -95,9 +95,60 @@ def valid_parentheses(s: str) -> bool:
     return len(stack) == 0
 
 
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+def mergeTwoLists(list1: [ListNode], list2: [ListNode]) -> [ListNode]:
+    cur = dummy = ListNode()
+    while list1 and list2:
+        if list1.val < list2.val:
+            cur.next = list1
+            print(cur.next)
+            list1, cur = list1.next, list1
+            print(list1)
+            print(cur)
+        else:
+            cur.next = list2
+            print(cur.next)
+            list2, cur = list2.next, list2
+            print(list2)
+            print(cur)
+
+    if list1 or list2:
+        cur.next = list1 if list1 else list2
+
+    return dummy.next
+
+
+def maxProfit(prices: list[int]) -> int:
+    """
+    You are given an array prices where prices[i] is the price of a given stock on the ith day.
+    You want to maximize your profit by choosing a single day to buy one stock and choosing a different day
+    in the future to sell that stock.
+    Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+    :param prices: list ints
+    :return: int
+    """
+    min_price = float('inf')
+    max_profit = 0
+    for i in range(len(prices)):
+        if prices[i] < min_price:
+            min_price = prices[i]
+        elif prices[i] - min_price > max_profit:
+            max_profit = prices[i] - min_price
+
+    return max_profit
+
+
 if __name__ == '__main__':
-    print(running_sum([1, 2, 3, 4]))
-    print(pivot_index([1, 7, 3, 6, 5, 6]))
-    print(is_isomorphic("paper", "title"))
-    print(twoSum([2, 7, 11, 15]))
-    print(valid_parentheses('([{}])'))
+    # print(running_sum([1, 2, 3, 4]))
+    # print(pivot_index([1, 7, 3, 6, 5, 6]))
+    # print(is_isomorphic("paper", "title"))
+    # print(twoSum([2, 7, 11, 15]))
+    # print(valid_parentheses('([{}])'))
+    # print(mergeTwoLists(ListNode(1,2,3), [1,2,3]))
+    print(maxProfit([7,1,5,3,6,4]))
