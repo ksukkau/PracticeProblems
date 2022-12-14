@@ -143,6 +143,17 @@ def maxProfit(prices: list[int]) -> int:
 
     return max_profit
 
+def isPalindrome(s: str) -> bool:
+    s = ''.join(ch for ch in s if ch.isalnum())
+    s = list(s.lower())
+    new_s = []
+    if s == '':
+        return True
+    for i in range(len(s)):
+        if s[i] == s[-1 - i]:
+            new_s.append(s[i])
+    return new_s == s
+
 
 if __name__ == '__main__':
     # print(running_sum([1, 2, 3, 4]))
@@ -151,4 +162,5 @@ if __name__ == '__main__':
     # print(twoSum([2, 7, 11, 15]))
     # print(valid_parentheses('([{}])'))
     # print(mergeTwoLists(ListNode(1,2,3), [1,2,3]))
-    print(maxProfit([7,1,5,3,6,4]))
+    # print(maxProfit([7,1,5,3,6,4]))
+    print(isPalindrome("A man, a plan, a canal: Panama"))
