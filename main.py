@@ -162,6 +162,34 @@ def isPalindrome(s: str) -> bool:
     return new_s == s
 
 
+def isAnagram(s: str, t: str) -> bool:
+    """
+    Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+    An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+    typically using all the original letters exactly once.
+    :param s: String
+    :param t: String
+    :return: Boolean
+    """
+    s = s.lower().replace(" ", "")
+    t = t.lower().replace(" ", "")
+
+    letter_count_s = {}
+    letter_count_t = {}
+    for x in s:
+        if x not in letter_count_s:
+            letter_count_s[x] = 1
+        else:
+            letter_count_s[x] += 1
+    for x in t:
+        if x not in letter_count_t:
+            letter_count_t[x] = 1
+        else:
+            letter_count_t[x] += 1
+
+    return letter_count_t == letter_count_s
+
+
 if __name__ == '__main__':
     # print(running_sum([1, 2, 3, 4]))
     # print(pivot_index([1, 7, 3, 6, 5, 6]))
@@ -170,4 +198,5 @@ if __name__ == '__main__':
     # print(valid_parentheses('([{}])'))
     # print(mergeTwoLists(ListNode(1,2,3), [1,2,3]))
     # print(maxProfit([7,1,5,3,6,4]))
-    print(isPalindrome("A man, a plan, a canal: Panama"))
+    # print(isPalindrome("A man, a plan, a canal: Panama"))
+    print(isAnagram("I am Lord Voldemort", "Tom Marvolo Riddle"))

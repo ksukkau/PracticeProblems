@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93150be0-30cd-4893-906d-fae1c57b2389" name="Changes" comment="" />
+    <list default="true" id="93150be0-30cd-4893-906d-fae1c57b2389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +84,7 @@
       <workItem from="1663266121462" duration="13000" />
       <workItem from="1670890788384" duration="7308000" />
       <workItem from="1670980712628" duration="596000" />
-      <workItem from="1670982797314" duration="782000" />
+      <workItem from="1670982797314" duration="1934000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1663041341019</created>
@@ -125,6 +127,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added isomorphic Strings problem" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Practice_Problems$main.coverage" NAME="main Coverage Results" MODIFIED="1670979549241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practice_Problems$main.coverage" NAME="main Coverage Results" MODIFIED="1670983854728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
