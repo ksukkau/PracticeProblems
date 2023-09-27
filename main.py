@@ -266,6 +266,32 @@ def minPartitions(n: str) -> int:
             max_digit = digit
     return int(max_digit)
 
+def decodeAtIndex(s, k):
+    """
+    :type s: str
+    :type k: int
+    :rtype: str
+    """
+    total_length = 0
+
+    # Calculate the total length of the decoded string
+    for char in s:
+        if char.isnumeric():
+            total_length *= int(char)
+        else:
+            total_length += 1
+
+    # Traverse the string in reverse to find the character at position k
+    for char in reversed(s):
+        k %= total_length  # Reduce k based on the total length
+
+        if k == 0 and char.isalpha():
+            return char
+
+        if char.isnumeric():
+            total_length /= int(char)
+        else:
+            total_length -= 1
 
 
 if __name__ == '__main__':
@@ -281,4 +307,5 @@ if __name__ == '__main__':
     #print(floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2))
     #print(findTheDifference("abcdefghi", "abcdeffghi"))
     #print(minPartitions('32'))
+    pri#nt(decodeAtIndex("leet2code3", 10))
 
