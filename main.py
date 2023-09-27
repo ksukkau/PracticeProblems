@@ -307,5 +307,5 @@ if __name__ == '__main__':
     #print(floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2))
     #print(findTheDifference("abcdefghi", "abcdeffghi"))
     #print(minPartitions('32'))
-    pri#nt(decodeAtIndex("leet2code3", 10))
+    #print(decodeAtIndex("leet2code3", 10))
 
