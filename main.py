@@ -293,6 +293,28 @@ def decodeAtIndex(s, k):
         else:
             total_length -= 1
 
+def mergeAlternately(word1, word2):
+    """
+    You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+    Return the merged string.
+
+    :type word1: str
+    :type word2: str
+    :rtype: str
+    """
+    new_word = ''
+
+    if len(word1) > len(word2):
+        length = len(word1)
+    else:
+        length = len(word2)
+
+    for i in range(length):
+        if len(word1) - 1 >= i:
+            new_word += word1[i]
+        if len(word2) - 1 >= i:
+            new_word += word2[i]
+    return new_word
 
 if __name__ == '__main__':
     # print(running_sum([1, 2, 3, 4]))
@@ -308,4 +330,4 @@ if __name__ == '__main__':
     #print(findTheDifference("abcdefghi", "abcdeffghi"))
     #print(minPartitions('32'))
     #print(decodeAtIndex("leet2code3", 10))
-
+    #print(mergeAlternately('abc', 'pqr'))
