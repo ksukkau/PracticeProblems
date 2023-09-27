@@ -233,6 +233,39 @@ def findTheDifference(s: str, t: str) -> str:
         else:
             return t_list[i]
 
+def minPartitions(n: str) -> int:
+    """
+    A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros.
+    For example, 101 and 1100 are deci-binary, while 112 and 3001 are not.
+
+    Given a string n that represents a positive decimal integer, return the minimum number of positive deci-binary
+    numbers needed so that they sum up to n.
+    theres 2 options here the one used uses memory but is slower
+
+    this option is faster but uses more memory but is faster
+
+            return int(max(n))
+
+    this works because the largest # needs the max number of 1s in its place
+    example
+    82934
+    11111
+    11111
+    10111
+    10101
+    10100
+    10100
+    10100
+    10100
+    00100
+
+    """
+    max_digit = '0'
+    for digit in n:
+        if digit > max_digit:
+            max_digit = digit
+    return int(max_digit)
+
 
 
 if __name__ == '__main__':
@@ -246,4 +279,6 @@ if __name__ == '__main__':
     # print(isPalindrome("A man, a plan, a canal: Panama"))
     #print(isAnagram("I am Lord Voldemort", "Tom Marvolo Riddle"))
     #print(floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2))
-    print(findTheDifference("abcdefghi", "abcdeffghi"))
+    #print(findTheDifference("abcdefghi", "abcdeffghi"))
+    #print(minPartitions('32'))
+

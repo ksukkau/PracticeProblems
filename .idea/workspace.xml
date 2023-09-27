@@ -89,7 +89,7 @@
       <workItem from="1671656102337" duration="764000" />
       <workItem from="1674856080432" duration="301000" />
       <workItem from="1675715099562" duration="1000" />
-      <workItem from="1695838227733" duration="363000" />
+      <workItem from="1695838227733" duration="1345000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1663041341019</created>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663210923043</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added find the difference problem">
+      <created>1695838674353</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695838674353</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,10 +136,11 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="added pivot index problem" />
     <MESSAGE value="added isomorphic Strings problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="added isomorphic Strings problem" />
+    <MESSAGE value="added find the difference problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="added find the difference problem" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1695838261180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1695839768236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practice_Problems$main.coverage" NAME="main Coverage Results" MODIFIED="1674856358677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
