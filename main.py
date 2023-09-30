@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def running_sum(nums: list[int]) -> list[int]:
     """Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
     Return the running sum of nums.
@@ -327,6 +330,48 @@ def isMonotonic(nums: list[int]) -> bool:
         return True
     return False
 
+
+def find132pattern(nums):
+    """
+    :type nums: List[int]
+    :rtype: bool
+    """
+    """  Brute for solution takes too long but works     
+    for i in range(len(nums)-2):
+        for k in range(i, len(nums)-1):
+            if nums[k] > nums[i]:
+                for j in range(k, len(nums)):
+                    if nums[k] > nums[j] and nums[j] > nums[i]:
+                        return True
+    return False"""
+
+    length = len(nums)
+
+    # check if the array is too short first dont waste time
+    if length < 3:
+        return False
+    # create a stack to keep track of decreasing elements using a double ended q
+    decreasing_stack = deque()
+
+    # store maximum value of the third element in the 132 pattern
+    max_third_element = float('-inf')
+
+    # traverse the array from right to left
+    for i in range(length - 1, -1, -1):
+        current_number = nums[i]
+
+        # check for 132 pattern
+        if current_number < max_third_element:
+            return True
+
+        # maintain the stack with decreasing elements
+        while decreasing_stack and decreasing_stack[0] < current_number:
+            max_third_element = decreasing_stack.popleft()
+
+        # push the current element onto the stack
+        decreasing_stack.appendleft(current_number)
+    return False
+
 if __name__ == '__main__':
     # print(running_sum([1, 2, 3, 4]))
     # print(pivot_index([1, 7, 3, 6, 5, 6]))
@@ -343,3 +388,4 @@ if __name__ == '__main__':
     #print(decodeAtIndex("leet2code3", 10))
     #print(mergeAlternately('abc', 'pqr'))
     #print(isMonotonic([1,2,2,3]))
+    print(find132pattern([3,5,0,3,4]))
