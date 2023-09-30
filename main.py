@@ -316,6 +316,17 @@ def mergeAlternately(word1, word2):
             new_word += word2[i]
     return new_word
 
+def isMonotonic(nums: list[int]) -> bool:
+    sorted_list = []
+    sorted_list.extend(nums)
+    sorted_list.sort()
+    if nums == sorted_list:
+        return True
+    sorted_list.sort(reverse=True)
+    if nums == sorted_list:
+        return True
+    return False
+
 if __name__ == '__main__':
     # print(running_sum([1, 2, 3, 4]))
     # print(pivot_index([1, 7, 3, 6, 5, 6]))
@@ -331,3 +342,4 @@ if __name__ == '__main__':
     #print(minPartitions('32'))
     #print(decodeAtIndex("leet2code3", 10))
     #print(mergeAlternately('abc', 'pqr'))
+    #print(isMonotonic([1,2,2,3]))
