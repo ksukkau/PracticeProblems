@@ -320,6 +320,13 @@ def mergeAlternately(word1, word2):
     return new_word
 
 def isMonotonic(nums: list[int]) -> bool:
+    """
+    An array is monotonic if it is either monotone increasing or monotone decreasing.
+    An array nums is monotone increasing if for all i <= j, nums[i] <= nums[j]. An array nums is monotone decreasing if for all i <= j, nums[i] >= nums[j].
+    Given an integer array nums, return true if the given array is monotonic, or false otherwise.
+    :param nums:
+    :return:
+    """
     sorted_list = []
     sorted_list.extend(nums)
     sorted_list.sort()
@@ -333,6 +340,8 @@ def isMonotonic(nums: list[int]) -> bool:
 
 def find132pattern(nums):
     """
+    Given an array of n integers nums, a 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
+    Return true if there is a 132 pattern in nums, otherwise, return false.
     :type nums: List[int]
     :rtype: bool
     """
